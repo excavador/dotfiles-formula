@@ -1,9 +1,8 @@
 ================
-template-formula
+dotfiles-formula
 ================
 
-A saltstack formula that is empty. It has dummy content to help with a quick
-start on a new formula.
+dotfiles - bash, emacs, tmux, git
 
 .. note::
 
@@ -16,7 +15,7 @@ Available states
 .. contents::
     :local:
 
-``template``
+``dotfiles``
 ------------
 
-Installs the template package, and starts the associated template service.
+Install git, emacs, tmux, htop, yaml-mode and config files. I use it with `master-less salt-stack <http://docs.saltstack.com/en/latest/topics/tutorials/quickstart.html>`_.
