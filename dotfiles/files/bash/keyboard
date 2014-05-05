@@ -1,0 +1,4 @@
+SET_XKB_MAP="$(which setxkbmap 2>/dev/null || true)"
+if [ -x "${SET_XKB_MAP}" ]; then
+    ${SET_XKB_MAP} us,ru -option grp:caps_toggle,grp_led:caps,lv3:ralt_switch_multikey
+fi

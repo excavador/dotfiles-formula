@@ -1,3 +1,4 @@
-template:
-  lookup:
-    master: template-master
+dotfiles:
+  user: 'root'
+  group: 'root'
+  home: '/root'

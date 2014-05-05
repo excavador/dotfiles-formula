@@ -1,0 +1,7 @@
+case $TERM in
+    "dumb")
+            ;;
+    *)
+            export TERM="xterm"
+            ;;
+esac

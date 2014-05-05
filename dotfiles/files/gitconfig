@@ -1,0 +1,7 @@
+[user]
+	email = oleg@oleg.sh
+	name = Oleg Tsarev
+[core]
+	editor = emacs
+[color]
+	ui = true

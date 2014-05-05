@@ -1,0 +1,23 @@
+FULL_KEY_FILE_LIST="$(cat ${ROOT_BASH}/ssh-key-list)"
+KEY_FILE_LIST=""
+for KEY in ${FULL_KEY_FILE_LIST}; do
+    if [ -f ~/.ssh/$KEY ]; then
+        if [ -z "${KEY_FILE_LIST}" ]; then
+            SPACE=""
+        else
+            SPACE=" "
+        fi
+        KEY_FILE_LIST="${KEY_FILE_LIST}${SPACE}${KEY}"
+    fi
+done
+KEY_CHAIN="$(which keychain 2>/dev/null || true)"
+if [ -x "${KEY_CHAIN}" ]; then
+    if [ -n "${KEY_FILE_LIST}" ]; then
+        eval $(${KEY_CHAIN} --eval --agents ssh -Q --quiet "${KEY_FILE_LIST}" || true)
+        for KEY in ${KEY_FILE_LIST}; do
+            if [ -f ~/.ssh/$KEY ]; then
+                ssh-add ~/.ssh/$KEY
+            fi
+        done
+    fi
+fi

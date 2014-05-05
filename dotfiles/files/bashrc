@@ -1,0 +1,11 @@
+ROOT_BASH="$(dirname $(readlink -f ${BASH_SOURCE[0]}))/bash"
+source ${ROOT_BASH}/path
+source ${ROOT_BASH}/ccache
+source ${ROOT_BASH}/browser
+source ${ROOT_BASH}/editor
+source ${ROOT_BASH}/keyboard
+source ${ROOT_BASH}/prompt
+source ${ROOT_BASH}/ssh-agent
+source ${ROOT_BASH}/terminal
+source ${ROOT_BASH}/lang
+source ${ROOT_BASH}/history

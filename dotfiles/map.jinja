@@ -1,0 +1,5 @@
+{% set packages = salt['grains.filter_by']({
+        'Ubuntu': ['emacs23-nox', 'git', 'htop', 'tmux', 'yaml-mode'],
+        'Debian': ['emacs23-nox', 'git', 'htop', 'tmux', 'yaml-mode'],
+   })
+%}

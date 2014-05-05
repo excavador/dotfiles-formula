@@ -1,0 +1,8 @@
+EMACS="$(which emacs 2>/dev/null || true)"
+NANO="$(which nano 2>/dev/null | true)"
+for EDITOR in "${EMACS}" "${NANO}"; do
+    if [ -x "${EDITOR}" ]; then
+       export EDITOR
+       break
+    fi
+done
