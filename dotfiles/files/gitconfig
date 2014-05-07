@@ -3,5 +3,6 @@
 	name = Oleg Tsarev
 [core]
 	editor = emacs
+	excludesfile = ~/.gitignore
 [color]
 	ui = true
